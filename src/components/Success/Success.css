@@ -1,0 +1,23 @@
+.Content {
+  display: block;
+  align-content: center;
+  width: 42.5rem;
+  height: 30.25rem;
+  background-color: #E9E9E9;
+  border-radius: 1.25rem;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.Exit {
+  width: 2.125rem;
+  height: 2.125rem;
+  background-color: #FF0000;
+  margin-top: 1.25rem;
+  margin-left: 90%;
+  margin-bottom: 3rem;
+}

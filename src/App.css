@@ -13,7 +13,7 @@ label {
   margin-bottom: 1rem;
 }
 
-.Container {
+.Forms {
   display: grid;
   align-content: space-evenly;
   justify-content: center;
@@ -43,4 +43,5 @@ button {
   width: 13.25rem;
   height:3.75rem;
   margin: 0 auto;
+  cursor: pointer; 
 }
