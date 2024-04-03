@@ -1,11 +1,10 @@
 import './Error.css';
 
-function Error ({ typeError, setToggle, setError, setTelefone }) {
+function Error ({ typeError, setToggle, setError }) {
 
   function handleToggle() {
     setError(false);
     setToggle(false);
-    setTelefone("");
   }
 
   return (

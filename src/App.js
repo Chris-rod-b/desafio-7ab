@@ -1,10 +1,9 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Success from "./components/Success/Success.js";
 import Error from "./components/Error/Error.js";
 import { maskPhone } from "./util/maskPhone.js";
 import { emailCheck } from "./util/emailCheck.js";
 import { phoneCheck } from "./util/phoneCheck.js";
-
 
 import './App.css';
 
@@ -25,9 +24,6 @@ function App() {
     e.preventDefault();
 
     const content = ref.current;
-
-    console.log(phoneCheck(content.telefone.value));
-    console.log(content.telefone.value);
     
     if (!emailCheck(content.email.value)) {
       setError(!emailCheck(content.email.value));
@@ -48,6 +44,10 @@ function App() {
     setToggle(true);
   }
 
+  useEffect(() => {
+    setTelefone("");
+  }, [toggle])
+
   return (
     <div className="App">
       { !toggle  && (
@@ -66,11 +66,11 @@ function App() {
           </form>
         </div>
        )} { (toggle && !error)  && (
-          <Success data={data} setToggle={setToggle} setTelefone={setTelefone}/>
+          <Success data={data} setToggle={setToggle} />
        )}
 
       { (toggle && error) && (
-          <Error typeError={typeError} setToggle={setToggle} setError={setError} setTelefone={setTelefone}/>
+          <Error typeError={typeError} setToggle={setToggle} setError={setError} />
        )}
       
     </div>

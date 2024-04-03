@@ -1,10 +1,9 @@
 import './Success.css';
 
-function Success ({ data, setToggle, setTelefone }) {
+function Success ({ data, setToggle }) {
 
   function handleToggle() {
     setToggle(false);
-    setTelefone("");
   }
 
   return (
